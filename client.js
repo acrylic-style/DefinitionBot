@@ -42,12 +42,12 @@ const getEmbed = async message => {
     return `*${word}[${link}]*`
   }
   let pageText = page.length >= 2045 ? page.substring(0, 2045) + '...' : page
-  pageText = pageText.replace(/{{.*?}}/g, '')
+  pageText = pageText.replace(/{{.*?}}/gm, '')
   pageText = pageText.replace(/'''''(.*?)'''''/g, (match, p1) => `***${p1}***`)
   pageText = pageText.replace(/'''(.*?)'''/g, (match, p1) => `**${p1}**`)
   pageText = pageText.replace(/''(.*?)''/g, (match, p1) => `*${p1}*`)
   pageText = pageText.replace(/\[\[(.*?)\]\]/g, (match, p1) => wikimd(p1))
-  pageText = pageText.replace(/<ref.*?>.*?<\/ref>/g, '')
+  pageText = pageText.replace(/<ref.*?>.*?<\/ref>/gm, '')
   embed.setColor([0,255,0])
   embed.setTitle(text)
   embed.setURL(`https://${lang}.wikipedia.org/wiki/${text}`)
