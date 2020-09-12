@@ -20,7 +20,7 @@
     "@google-cloud/translate": "^4.1.3",
     "bot-framework": "acrylic-style/bot-framework",
     "logger.js": "acrylic-style/logger.js",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "yaml": "^1.6.0"
   }
 }
